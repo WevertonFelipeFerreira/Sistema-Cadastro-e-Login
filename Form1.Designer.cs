@@ -32,6 +32,7 @@ namespace CadastroDeUsuario
             this.labelLogin = new System.Windows.Forms.Label();
             this.labelSenha = new System.Windows.Forms.Label();
             this.GroupBoxLogin = new System.Windows.Forms.GroupBox();
+            this.checkBoxSenha = new System.Windows.Forms.CheckBox();
             this.BtnLogar = new System.Windows.Forms.Button();
             this.TextBoxSenha = new System.Windows.Forms.TextBox();
             this.TextBoxLogin = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@ namespace CadastroDeUsuario
             this.BtnAttSenha = new System.Windows.Forms.Button();
             this.BtnAttDados = new System.Windows.Forms.Button();
             this.BtnLoggout = new System.Windows.Forms.Button();
-            this.checkBoxSenha = new System.Windows.Forms.CheckBox();
             this.GroupBoxLogin.SuspendLayout();
             this.GroupBoxUsuario.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -100,6 +100,17 @@ namespace CadastroDeUsuario
             this.GroupBoxLogin.TabIndex = 1;
             this.GroupBoxLogin.TabStop = false;
             this.GroupBoxLogin.Text = "Área de Login";
+            // 
+            // checkBoxSenha
+            // 
+            this.checkBoxSenha.AutoSize = true;
+            this.checkBoxSenha.Location = new System.Drawing.Point(77, 110);
+            this.checkBoxSenha.Name = "checkBoxSenha";
+            this.checkBoxSenha.Size = new System.Drawing.Size(136, 29);
+            this.checkBoxSenha.TabIndex = 3;
+            this.checkBoxSenha.Text = "Exibir senha";
+            this.checkBoxSenha.UseVisualStyleBackColor = true;
+            this.checkBoxSenha.CheckedChanged += new System.EventHandler(this.checkBoxSenha_CheckedChanged);
             // 
             // BtnLogar
             // 
@@ -349,19 +360,9 @@ namespace CadastroDeUsuario
             this.BtnLoggout.Name = "BtnLoggout";
             this.BtnLoggout.Size = new System.Drawing.Size(94, 29);
             this.BtnLoggout.TabIndex = 0;
-            this.BtnLoggout.Text = "Sair";
+            this.BtnLoggout.Text = "Logout";
             this.BtnLoggout.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSenha
-            // 
-            this.checkBoxSenha.AutoSize = true;
-            this.checkBoxSenha.Location = new System.Drawing.Point(77, 110);
-            this.checkBoxSenha.Name = "checkBoxSenha";
-            this.checkBoxSenha.Size = new System.Drawing.Size(136, 29);
-            this.checkBoxSenha.TabIndex = 3;
-            this.checkBoxSenha.Text = "Exibir senha";
-            this.checkBoxSenha.UseVisualStyleBackColor = true;
-            this.checkBoxSenha.CheckedChanged += new System.EventHandler(this.checkBoxSenha_CheckedChanged);
+            this.BtnLoggout.Click += new System.EventHandler(this.BtnLoggout_Click);
             // 
             // Painel
             // 
@@ -373,6 +374,7 @@ namespace CadastroDeUsuario
             this.Controls.Add(this.GroupBoxLogin);
             this.Name = "Painel";
             this.Text = "Painel";
+            this.Load += new System.EventHandler(this.Painel_Load);
             this.GroupBoxLogin.ResumeLayout(false);
             this.GroupBoxLogin.PerformLayout();
             this.GroupBoxUsuario.ResumeLayout(false);

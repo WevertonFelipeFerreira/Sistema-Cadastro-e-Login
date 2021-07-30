@@ -48,6 +48,11 @@ namespace CadastroDeUsuario
                 && idade == true && cpf == true && cep == true && endereco == true &&
                 cidade == true && estado == true)
             {
+                if (TextBoxCadastroSenha.Text.Length < 8) 
+                {
+                    MessageBox.Show("A senha deve conter mais que 8 digitos.","AVISO!");
+                    return;
+                }
                 if (TextBoxConfirmaSenha.Text != TextBoxCadastroSenha.Text) 
                 {
                     MessageBox.Show("As senhas não conferem!");
